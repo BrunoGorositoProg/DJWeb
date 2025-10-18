@@ -1,0 +1,318 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.navbar {
+  background-color: #050024;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.logo span {
+  color: #61cf36;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #61cf36;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, rgba(5,0,36,0.9), rgba(0,0,0,0.7)), url('../images/Textura2.png') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.hero span {
+  color: #61cf36;
+}
+
+.hero p {
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+.btn-primary {
+  background-color: #61cf36;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #61cf36;
+}
+
+/* SECCIONES */
+/* Contenedor que activa el scroll snap */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2em;
+  color: #61cf36;
+  margin-bottom: 20px;
+}
+
+/* SOBRE MÍ */
+.about 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.about img {
+  width: 400px;
+  border-radius: 15px;
+}
+.imagen {
+  background-color: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  width: auto;
+  box-shadow: 0 0 12px rgba(151, 142, 15, 0.705);
+  display: flex;
+  flex-direction: column;
+}
+/* EVENTOS */
+.event-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.event-card {
+  background-color: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  width: auto;
+  box-shadow: 0 0 8px rgba(151, 142, 15, 0.705);
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card img {
+  padding: 5px 10px 5px;
+  height: 380px;
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  
+}
+
+.event-card h3 {
+  color: #fff;
+  margin: 10px 10px 0;
+
+}
+
+/* MÚSICA */
+.music-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-outline {
+  border: 2px solid #61cf36;
+  color: #61cf36;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.background-texture {
+  background-image: url('../images/Textura2.png'); /* Usá una imagen de textura tipo papel, vinilo o glitch */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+/* Fondo negro puro */
+.bg-black {
+  background-image: url('../images/DegradeAzul.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* Fondo gris oscuro */
+.bg-gray {
+  background-image: url('../images/DegradeAzul.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Fondo con textura(claro) Textura2 muy buena*/
+.bg-brush {
+  background-image: url('../images/Textura2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Fondo con textura tipo brush (oscuro) */
+.bg-brush-dark {
+  background-image: url('../images/ondas-grey.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Fondo oscuro general */
+.bg-dark {
+  background-color: #0f0f0f;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: #61cf36;
+  color: #fff;
+}
+
+/* GALERÍA */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CONTACTO */
+.social a {
+  color: #ffffff;
+  margin: 10px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #050024;
+  padding: 20px;
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9em;
+}
+.bg-musica {
+  background-color: #7e7d7d73;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.bg-eventos{
+  background-image: url('../images/BrushAzul.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #61cf36;
+}
+
+button.btn-primary {
+  align-self: flex-start;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: #61cf36;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background-color: #4db42d;
+}
