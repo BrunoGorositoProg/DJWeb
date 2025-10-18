@@ -3,18 +3,67 @@ body {
   margin: 0;
   background-color: #0a0a0a;
   color: #fff;
+  padding-top: 80px; /* esto evita que el contenido quede tapado */
 }
 
+
 .navbar {
-  background-color: #050024;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 10px;
+  width: 100%;
+  background-color: rgba(5, 0, 36, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   z-index: 1000;
 }
+/* --- Responsive Navbar --- */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 0, 36, 0.97);
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    margin: 12px 0;
+    font-size: 1.1em;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+nav a:hover {
+  color: #61cf36;
+}
+
 
 .logo {
   font-weight: 700;
@@ -162,15 +211,6 @@ nav a:hover {
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-}
-.background-texture {
-  background-image: url('../images/Textura2.png'); /* Usá una imagen de textura tipo papel, vinilo o glitch */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
 }
 /* Fondo negro puro */
 .bg-black {
