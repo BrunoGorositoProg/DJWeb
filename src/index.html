@@ -44,15 +44,19 @@
           <br>Pedro se destaca por sus mezclas prolijas, suaves y sin tantas vueltas. Ha desarrollado un gusto por los sonidos viejos, sucios y grooveros dentro del House, sumándole <br>melodías cortas, repetitivas y que si o si van a quedar en tu cabeza. Tiene siempre presente la elegancia y sabiduría a la hora de seleccionar <br>la música con la que los va a deleitar, ya que tiene bien claro a donde se dirige y siempre va a dar todo por conseguirlo.<br>
           <br>Pedro sigue su camino como DJ, ya con varios años de experiencia, ha logrado que su música llegue más lejos de lo que alguna vez pensó. Ha compartido cabinas con referentes<br> nacionales como lo son: Fanetti - Mariano As - Gian Chiarelli - Rafa Calello - Lemonade -Zone 7. También una de sus fechas han permitido que por primera vez<br> comparta cabina con un dj internacional como lo es Bizza, en lo que fue su paso por la ciudad de Esperanza, Santa Fe.</p>
          </div>
+         <a href="aboutUs.html" class="btn-More">¡Quiero saber más!</a>
+
       <div class="imagen">
       <img src="images/IMG-20251016-WA0027.jpg" alt="Pedro Gorosito DJ" />
       </div>
     </div>
   </section>
  <!-- EVENTOS -->
-  <section id="eventos" class="section events bg-eventos">
-    <h2>Eventos Destacados</h2>
-    <div class="event-grid">
+  <section id="eventos" class="section eventos bg-eventos">
+  <h2>Eventos Destacados</h2>
+  <div class="carousel-container">
+  <div class="carousel-track">
+    
       <div class="event-card">
         <img src="/images/ManuXMuter.jpg" alt="IceXGrovee&Grounded" />
         <h3>Ice Producciones <br>By Grovee & Grounded</h3>
@@ -78,8 +82,11 @@
         <h3>Flapper X Memories</h3>
         <p>Franco Schmidt<br>Fanetti<br>Mariano As</p>
       </div>
+      
     </div>
-  </section>
+    </div>
+</section>
+
 
   <!-- MÚSICA -->
   <section id="musica" class="section music bg-eventos">
@@ -135,6 +142,27 @@
     nav.classList.toggle('active');
   });
 </script>
+
+<script>
+  const track = document.querySelector('.carousel-track');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let scrollAmount = 0;
+  const cardWidth = 320; // ancho aproximado de cada tarjeta + margen
+
+  nextBtn.addEventListener('click', () => {
+    scrollAmount += cardWidth;
+    track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    scrollAmount -= cardWidth;
+    if (scrollAmount < 0) scrollAmount = 0;
+    track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
 
 </body>
 </html>

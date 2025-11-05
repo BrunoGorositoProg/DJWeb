@@ -110,6 +110,16 @@ nav a:hover {
   max-width: 600px;
 }
 
+
+.btn-More{
+  background-color: #61cf36;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
 .btn-primary {
   background-color: #61cf36;
   color: white;
@@ -161,11 +171,73 @@ nav a:hover {
   border-radius: 15px;
   overflow: hidden;
   width: auto;
-  box-shadow: 0 0 12px rgba(151, 142, 15, 0.705);
+  box-shadow: 0 0 12px rgba(151, 15, 137, 0.705);
   display: flex;
   flex-direction: column;
 }
 /* EVENTOS */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+.event-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+}
+.carousel-btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f0c000;
+  border: 2px solid #f0c000;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(240, 192, 0, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
 .event-grid {
   display: flex;
   flex-wrap: wrap;
@@ -196,6 +268,7 @@ nav a:hover {
   margin: 10px 10px 0;
 
 }
+
 
 /* MÚSICA */
 .music-links {
@@ -355,4 +428,31 @@ button.btn-primary {
 
 button.btn-primary:hover {
   background-color: #4db42d;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-card {
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.gallery-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
