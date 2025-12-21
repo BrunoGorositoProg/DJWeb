@@ -2,22 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pedro Gorosito | DJ & Music Producer</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body class="background-texture snap-container">
 
-  <!-- NAVBAR -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
   <header class="navbar">
     <div class="logo">DJ <span>Pedro Gorosito</span></div>
-      <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-    <nav>
-      <a href="#Inicio">Inicio</a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav">
+      <a href="#inicio">Inicio</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#eventos">Eventos</a>
       <a href="#musica">Música</a>
@@ -25,97 +33,95 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="Inicio" class="hero">
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="hero">
     <div class="hero-content">
       <h1>Vive la experiencia con <span>Pedro Gorosito</span></h1>
-      <p>Ritmo, energía y pasión por la música electrónica. Creando atmósferas únicas en cada presentación.</p>
+      <p>
+        Ritmo, energía y pasión por la música electrónica.
+        Creando atmósferas únicas en cada presentación.
+      </p>
       <a href="#contacto" class="btn-primary">Contratar Ahora</a>
     </div>
   </section>
 
-  <!-- SOBRE MÍ -->
+  <!-- ================= SOBRE MI ================= -->
   <section id="sobre-mi" class="section about bg-dark">
     <div class="container">
       <div class="text">
         <h2>Sobre mí</h2>
-        <p>Pedro Gorosito nacido el 19 de noviembre del 2003 es un Dj oriundo de la ciudad de Rafaela, Santa Fe. Sus gustos por la música aparecieron a la corta edad<br>gracias a que su familia esta repleta de músicos. Su gusto por lo electrónico estuvo siempre presente.<br>
-          <br>Su tío quien es uno de sus máximos referentes le ha mostrado películas como "Interstella 5555" de Daft Punk y artistas como Michael Jackson, donde su pasión por<br> lo que ya se conoce como música electrónica, comenzaba a florar.A la corta edad de 16 años pudo conseguir su primer controlador, <br>y gracias a amigos de la escena, pudo comenzar a practicar lo que fueron sus primeras mezclas.<br>
-          <br>Pedro se destaca por sus mezclas prolijas, suaves y sin tantas vueltas. Ha desarrollado un gusto por los sonidos viejos, sucios y grooveros dentro del House, sumándole <br>melodías cortas, repetitivas y que si o si van a quedar en tu cabeza. Tiene siempre presente la elegancia y sabiduría a la hora de seleccionar <br>la música con la que los va a deleitar, ya que tiene bien claro a donde se dirige y siempre va a dar todo por conseguirlo.<br>
-          <br>Pedro sigue su camino como DJ, ya con varios años de experiencia, ha logrado que su música llegue más lejos de lo que alguna vez pensó. Ha compartido cabinas con referentes<br> nacionales como lo son: Fanetti - Mariano As - Gian Chiarelli - Rafa Calello - Lemonade -Zone 7. También una de sus fechas han permitido que por primera vez<br> comparta cabina con un dj internacional como lo es Bizza, en lo que fue su paso por la ciudad de Esperanza, Santa Fe.</p>
-         </div>
-         <a href="aboutUs.html" class="btn-More">¡Quiero saber más!</a>
+        <p>
+          Pedro Gorosito, DJ oriundo de Rafaela, Santa Fe, con una fuerte pasión
+          por la música electrónica desde temprana edad. Influenciado por su
+          familia de músicos y referentes como Daft Punk y Michael Jackson,
+          desarrolló un estilo prolijo, elegante y groovero dentro del House.
+          <br><br>
+          Ha compartido cabina con grandes referentes nacionales como Fanetti,
+          Mariano As, Gian Chiarelli, Rafa Calello y el DJ internacional Bizza.
+        </p>
+        <a href="aboutUs.html" class="btn-More">¡Quiero saber más!</a>
+      </div>
 
       <div class="imagen">
-      <img src="images/IMG-20251016-WA0027.jpg" alt="Pedro Gorosito DJ" />
+        <img src="images/IMG-20251016-WA0027.jpg" alt="Pedro Gorosito DJ"/>
       </div>
     </div>
   </section>
- <!-- EVENTOS -->
+
+  <!-- ================= EVENTOS ================= -->
   <section id="eventos" class="section eventos bg-eventos">
-  <h2>Eventos Destacados</h2>
+    <h2>Eventos Destacados</h2>
 
-  <div class="carousel-container">
-  <button class= "nav-arrov left">
-    <img src="images/prev_icon.jpg"/>
-  </button>
-    <div class="carousel-track">  
-      <div class="event-card">
-        <img src="/images/ManuXMuter.jpg" alt="IceXGrovee&Grounded" />
-        <h3>Ice Producciones <br>By Grovee & Grounded</h3>
-        <p>Muter<br> Manu Desrets</p>
-      </div>
-      <div class="event-card">
-        <img src="images/Fanetti.jpg" alt="Evento Flapper" />
-        <h3>Flapper Producciones</h3>
-        <p>Rafa Calello<br>Fanetti<br>Mariano As<br>Pablo Allasia</p>
-      </div>
-      <div class="event-card">
-        <img src="images/GrooveXBizza.jpg" alt="Evento Groove" />
-        <h3>Groove Club - Esperanza</h3>
-        <p>Bizza<br>Movedeck<br>Jonatan Lisa</p>
-      </div>
-      <div class="event-card">
-        <img src="images/FlapperXScoppa.jpg" alt="Evento Flapper" />
-        <h3>Flapper Producciones</h3>
-        <p>Nacho Scoppa<br>Agostina Lxpez</p>
-      </div>
-      <div class="event-card">
-        <img src="images/FrancoSmitch.jpg" alt="Evento Flapper" />
-        <h3>Flapper X Memories</h3>
-        <p>Franco Schmidt<br>Fanetti<br>Mariano As</p>
-      </div>
-      
-    </div>
-    <button class= "nav-arrov left">
-    <img src="images/nxt_icon.jpg"/>
-</button>
-  </div>
-</section>
+    <div class="carousel-container">
+      <button class="carousel-btn prev" id="prevBtn">❮</button>
 
+      <div class="carousel-track" id="carousel">
+        <div class="card">
+          <img src="images/ManuXMuter.jpg" alt="Ice Producciones"/>
+        </div>
+        <div class="card">
+          <img src="images/Fanetti.jpg" alt="Flapper Producciones"/>
+        </div>
+        <div class="card">
+          <img src="images/GrooveXBizza.jpg" alt="Groove Club Esperanza"/>
+        </div>
+        <div class="card">
+          <img src="images/FlapperXScoppa.jpg" alt="Flapper X Scoppa"/>
+        </div>
+        <div class="card">
+          <img src="images/FrancoSmitch.jpg" alt="Flapper X Memories"/>
+        </div>
+      </div>
 
-  <!-- MÚSICA -->
-  <section id="musica" class="section music bg-eventos">
-    <h2>LISTEN TO THE DJ SET</h2>
-    <p>Sumergite en el groove de Pedro con sus últimos sets y producciones</p>
-    <div class="music-links">
-      <a href="https://m.soundcloud.com/pedro-gorosito" target="_blank" class="btn-primary">▶ Escuchar en SoundCloud</a>
+      <button class="carousel-btn next" id="nextBtn">❯</button>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- ================= MUSICA ================= -->
+  <section id="musica" class="section music bg-eventos">
+    <h2>Listen to the DJ Set</h2>
+    <p>Sumergite en el groove de Pedro con sus últimos sets y producciones</p>
+
+    <div class="music-links">
+      <a href="https://m.soundcloud.com/pedro-gorosito" target="_blank" class="btn-primary">
+        ▶ Escuchar en SoundCloud
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
   <section id="contacto" class="section contact bg-dark">
-  <h2>Contacto & Booking</h2>
-  <div class="contact-container">
-    <form action="mailto:pgorosito.music@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+    <h2>Contacto & Booking</h2>
+
+    <form action="mailto:pgorosito.music@gmail.com" method="POST" enctype="text/plain">
       <div class="form-group">
         <label for="email">Tu correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required/>
       </div>
 
       <div class="form-group">
         <label for="subject">Asunto:</label>
-        <input type="text" id="subject" name="subject" required>
+        <input type="text" id="subject" name="subject" required/>
       </div>
 
       <div class="form-group">
@@ -125,6 +131,7 @@
 
       <button type="submit" class="btn-primary">Enviar mensaje</button>
     </form>
+
     <div class="contact-info">
       <p>📧 <a href="mailto:pgorosito.music@gmail.com">pgorosito.music@gmail.com</a></p>
       <p>📍 Rafaela, Santa Fe</p>
@@ -134,41 +141,56 @@
         </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2025 Pedro Gorosito. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- ================= SCRIPTS ================= -->
   <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav');
+    /* Navbar toggle */
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
 
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
 
-<script>
-  const track = document.querySelector('.carousel-track');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
+    /* Carrusel 3D */
+    const cards = document.querySelectorAll('.card');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-  let scrollAmount = 0;
-  const cardWidth = 320; // ancho aproximado de cada tarjeta + margen
+    let current = 0;
 
-  nextBtn.addEventListener('click', () => {
-    scrollAmount += cardWidth;
-    track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-  });
+    function updateCarousel() {
+      cards.forEach((card, i) => {
+        card.className = 'card';
+        const offset = (i - current + cards.length) % cards.length;
 
-  prevBtn.addEventListener('click', () => {
-    scrollAmount -= cardWidth;
-    if (scrollAmount < 0) scrollAmount = 0;
-    track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-  });
-</script>
+        if (offset === 0) card.classList.add('center');
+        else if (offset === 1) card.classList.add('right-1');
+        else if (offset === 2) card.classList.add('right-2');
+        else if (offset === cards.length - 1) card.classList.add('left-1');
+        else if (offset === cards.length - 2) card.classList.add('left-2');
+        else card.classList.add('hidden');
+      });
+    }
 
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + cards.length) % cards.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % cards.length;
+      updateCarousel();
+    });
+
+    updateCarousel();
+  </script>
 
 </body>
 </html>
