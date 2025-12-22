@@ -7,6 +7,7 @@ body {
   background-color: #0a0a0a;
   color: #fff;
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 a {
@@ -18,14 +19,14 @@ a {
    NAVBAR
 ========================= */
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: rgba(5, 0, 36, 0.95);
   backdrop-filter: blur(6px);
   padding: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   z-index: 1000;
 }
@@ -146,12 +147,65 @@ nav a:hover {
 .section {
   padding: 80px 20px;
   text-align: center;
+  background-color: #000;
 }
-
 .section h2 {
+   text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0 20px; /* espacio arriba y abajo */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(to bottom, #61cf36 45%, rgb( 255 255 255 / 0%) 84%);
+  background-clip: text;
+  color: transparent;
+}
+.section h3 {
+    font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: relative;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, #61cf36 30%, rgb( 255 255 255 / 0%) 76%);
+  background-clip: text;
+  color: transparent;
+}
+.section h4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0 20px; /* espacio arriba y abajo */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(to bottom, #61cf36 45%, rgb( 255 255 255 / 0%) 84%);
+  background-clip: text;
+  color: transparent;
+}
+.section h5 {
   font-size: 2em;
   color: #61cf36;
   margin-bottom: 20px;
+  text-align: center;
+}
+.music-subtitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0 20px; /* espacio arriba y abajo */
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 480px) {
+  .music-subtitle {
+    font-size: 1.5rem;
+    margin: 30px 0 15px;
+  }
 }
 
 /* =========================
@@ -171,7 +225,7 @@ nav a:hover {
 }
 
 .about img {
-  width: 400px;
+  width: 500px;
   border-radius: 15px;
 }
 
@@ -186,24 +240,58 @@ nav a:hover {
    FONDOS
 ========================= */
 .bg-dark {
-  background-color: #0f0f0f;
+  background: linear-gradient(to left, rgba(5,0,36,0.9), rgba(0,0,0,0.7)),
+              url('../images/DjC.jpg') center/cover no-repeat;
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
 }
 
 .bg-eventos {
-  background-image: url('../images/BrushAzul.jpg');
-  background-size: cover;
+ background: linear-gradient(to right, rgba(5,0,36,0.9), rgba(0,0,0,0.7)),
+              url('../images/Textura7.jpg') center/cover no-repeat;
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+}
+.bg-muscia {
+  background-color: #000;
+   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
-
+.bg-contacto {
+  background-color: #050024;
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 /* =========================
    CARRUSEL 3D EVENTOS
 ========================= */
+.event-title{
+  font-size: 7.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, rgb(255 255 255 / 35% ) 30%, rgb(255 255 255 / 0%), 76% );
+  background-clip:text;
+color: transparent;
+}
 .carousel-container {
   width: 100%;
   max-width: 1100px;
-  height: 450px;
+  height: 500px;
   margin: 60px auto 0;
   position: relative;
   perspective: 1200px;
@@ -217,15 +305,16 @@ nav a:hover {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
+  justify-items: center;
 }
 
 .card {
   position: absolute;
-  width: 280px;
-  height: 380px;
+  width: 287px;
+  height: 387px;
   border-radius: 20px;
   overflow: hidden;
-  background: #fff;
+  background: #090257;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   transition: all 0.8s ease;
   cursor: pointer;
@@ -271,7 +360,58 @@ nav a:hover {
   opacity: 0;
   pointer-events: none;
 }
-
+.flyer-info{
+  text-align: center;
+  margin-top: 20px;
+  transition: all 0.5s  ease-out;
+}
+.production-name{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+.production-name::before,
+.production-name::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100px;
+  height: 2px;
+  background: rgb(8, 42, 123);
+}
+.production-name::before{left: -120px;}
+.production-name::after{right: -120px;}
+.member-event{
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 10px 0;
+  margin-top: -15px;
+}
+.dots{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+.dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #cccccc70;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dot.active{
+  background: white;
+  transform: scale(1.2);
+}
 /* Botones carrusel */
 .carousel-btn {
   position: absolute;
@@ -286,6 +426,9 @@ nav a:hover {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-btn:hover {
@@ -293,9 +436,8 @@ nav a:hover {
   color: #000;
 }
 
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-
+.carousel-btn.prev { left: 10px; justify-content: center;}
+.carousel-btn.next { right: 10px; justify-content: center; }
 /* Responsive carrusel */
 @media (max-width: 768px) {
   .card {
@@ -316,6 +458,44 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+.music-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;   /* permite que se acomoden en varias filas */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.music-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0902578e;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.music-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Efecto hover */
+.music-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+@media (max-width: 480px) {
+  .music-card {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 /* =========================

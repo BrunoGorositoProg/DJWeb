@@ -61,56 +61,86 @@
         </p>
         <a href="aboutUs.html" class="btn-More">¡Quiero saber más!</a>
       </div>
-
+          <br><br>
       <div class="imagen">
         <img src="images/IMG-20251016-WA0027.jpg" alt="Pedro Gorosito DJ"/>
       </div>
     </div>
   </section>
 
-  <!-- ================= EVENTOS ================= -->
-  <section id="eventos" class="section eventos bg-eventos">
-    <h2>Eventos Destacados</h2>
+   <!-- ================= EVENTOS ================= -->
+<section id="eventos" class="section eventos bg-eventos">
+  <h3>Eventos Destacados</h3>
 
-    <div class="carousel-container">
-      <button class="carousel-btn prev" id="prevBtn">❮</button>
+  <div class="carousel-container">
+    <button class="carousel-btn prev" id="prevBtn">❮</button>
 
-      <div class="carousel-track" id="carousel">
-        <div class="card">
-          <img src="images/ManuXMuter.jpg" alt="Ice Producciones"/>
-        </div>
-        <div class="card">
-          <img src="images/Fanetti.jpg" alt="Flapper Producciones"/>
-        </div>
-        <div class="card">
-          <img src="images/GrooveXBizza.jpg" alt="Groove Club Esperanza"/>
-        </div>
-        <div class="card">
-          <img src="images/FlapperXScoppa.jpg" alt="Flapper X Scoppa"/>
-        </div>
-        <div class="card">
-          <img src="images/FrancoSmitch.jpg" alt="Flapper X Memories"/>
-        </div>
+    <div class="carousel-track" id="carousel">
+      <div class="card" data-index="0">
+        <img src="images/ManuXMuter.jpg" alt="Ice Producciones"/>
       </div>
-
-      <button class="carousel-btn next" id="nextBtn">❯</button>
+      <div class="card" data-index="1">
+        <img src="images/Fanetti.jpg" alt="Flapper Producciones"/>
+      </div>
+      <div class="card" data-index="2">
+        <img src="images/GrooveXBizza.jpg" alt="Groove Club Esperanza"/>
+      </div>
+      <div class="card" data-index="3">
+        <img src="images/FlapperXScoppa.jpg" alt="Flapper X Scoppa"/>
+      </div>
+      <div class="card" data-index="4">
+        <img src="images/FrancoSmitch.jpg" alt="Flapper X Memories"/>
+      </div>
     </div>
-  </section>
+
+    <button class="carousel-btn next" id="nextBtn">❯</button>
+  </div>
+  
+  <div class="flyer-info">
+    <h5 class="production-name"></h5>
+    <p class="member-event"></p>
+  </div>
+
+  <div class="dots">
+    <div class="dot active" data-index="0"></div>
+    <div class="dot" data-index="1"></div>
+    <div class="dot" data-index="2"></div>
+    <div class="dot" data-index="3"></div>
+    <div class="dot" data-index="4"></div>  
+  </div>
+</section> 
+  <script src="custom.js"></script>
 
   <!-- ================= MUSICA ================= -->
-  <section id="musica" class="section music bg-eventos">
-    <h2>Listen to the DJ Set</h2>
-    <p>Sumergite en el groove de Pedro con sus últimos sets y producciones</p>
+  <section id="musica" class="section music bg-musica"> 
+  <h2>Listen to the DJ Set</h2>
+  <p>Sumergite en el groove de Pedro con sus últimos sets y producciones</p>
 
-    <div class="music-links">
-      <a href="https://m.soundcloud.com/pedro-gorosito" target="_blank" class="btn-primary">
-        ▶ Escuchar en SoundCloud
-      </a>
-    </div>
-  </section>
+  <div class="music-links">
+    <a href="https://m.soundcloud.com/pedro-gorosito" target="_blank" class="btn-primary">
+      ▶ Escuchar en SoundCloud
+    </a>
+  </div>
+
+  <!-- Nuevo título para las cards -->
+  <h4 class="music-subtitle">Popular Tracks</h4>
+
+  <div class="music-gallery">
+    <a href="https://soundcloud.com/pedro-gorosito/pedro-gorosito-hotel-campo-alegre-rafaela-w-flapper-producciones" target="_blank" class="music-card">
+      <img src="images/ConsoleDj.jpg" alt="Pedro DJ Set 1">
+    </a>
+    <a href="https://soundcloud.com/pedro-gorosito/pedro-gorosito-house-dj-set-at-home-vol-01" target="_blank" class="music-card">
+      <img src="images/ConsoleDj.jpg" alt="Pedro DJ Set 2">
+    </a>
+    <a href="https://soundcloud.com/pedro-gorosito/pedro-gorosito-house-dj-set-at-home-vol02" target="_blank" class="music-card">
+      <img src="images/IMG-20251016-WA0014.jpg" alt="Pedro DJ Set 3">
+    </a>
+  </div>
+</section>
+
 
   <!-- ================= CONTACTO ================= -->
-  <section id="contacto" class="section contact bg-dark">
+  <section id="contacto" class="section contact bg-contacto">
     <h2>Contacto & Booking</h2>
 
     <form action="mailto:pgorosito.music@gmail.com" method="POST" enctype="text/plain">
