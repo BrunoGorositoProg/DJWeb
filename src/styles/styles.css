@@ -1,13 +1,15 @@
-/* =========================
-   ESTILOS GENERALES
-========================= */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background-color: #0a0a0a;
   color: #fff;
   padding-top: 80px;
-  overflow-x: hidden;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 a {
@@ -24,9 +26,9 @@ a {
   width: 100%;
   background-color: rgba(5, 0, 36, 0.95);
   backdrop-filter: blur(6px);
-  padding: 30px;
+  padding: 30px 30px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-between; /* logo izquierda, nav derecha */
   align-items: center;
   z-index: 1000;
 }
@@ -38,6 +40,11 @@ a {
 
 .logo span {
   color: #61cf36;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -97,7 +104,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 3em;
+  font-size: clamp(2rem, 6vw, 3em); /* se adapta a pantalla */
   font-weight: 700;
 }
 
@@ -111,37 +118,6 @@ nav a:hover {
 }
 
 /* =========================
-   BOTONES
-========================= */
-.btn-primary,
-.btn-More {
-  background-color: #61cf36;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.btn-primary:hover,
-.btn-More:hover {
-  background-color: #4db42d;
-}
-
-.btn-outline {
-  border: 2px solid #61cf36;
-  color: #61cf36;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-weight: 600;
-}
-
-.btn-outline:hover {
-  background-color: #61cf36;
-  color: #fff;
-}
-
-/* =========================
    SECCIONES
 ========================= */
 .section {
@@ -149,19 +125,21 @@ nav a:hover {
   text-align: center;
   background-color: #000;
 }
+
 .section h2 {
-   text-align: center;
-  font-size: 2rem;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
-  margin: 40px 0 20px; /* espacio arriba y abajo */
+  margin: 40px 0 20px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: linear-gradient(to bottom, #61cf36 45%, rgb( 255 255 255 / 0%) 84%);
+  background: linear-gradient(to bottom, #61cf36 45%, rgb(255 255 255 / 0%) 84%);
   background-clip: text;
   color: transparent;
 }
+
 .section h3 {
-    font-size: 6rem;
+  font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.02em;
@@ -170,37 +148,41 @@ nav a:hover {
   left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
-  white-space: nowrap;
-  background: linear-gradient(to bottom, #61cf36 30%, rgb( 255 255 255 / 0%) 76%);
+  background: linear-gradient(to bottom, #61cf36 30%, rgb(255 255 255 / 0%) 76%);
   background-clip: text;
   color: transparent;
+  white-space: normal; /* evita scroll horizontal */
 }
+
 .section h4 {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
-  margin: 40px 0 20px; /* espacio arriba y abajo */
+  margin: 40px 0 20px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: linear-gradient(to bottom, #61cf36 45%, rgb( 255 255 255 / 0%) 84%);
+  background: linear-gradient(to bottom, #61cf36 45%, rgb(255 255 255 / 0%) 84%);
   background-clip: text;
   color: transparent;
 }
+
 .section h5 {
-  font-size: 2em;
+  font-size: clamp(1.2rem, 3vw, 2em);
   color: #61cf36;
   margin-bottom: 20px;
   text-align: center;
 }
+
 .music-subtitle {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 4vw, 2rem);
   font-weight: 700;
-  margin: 40px 0 20px; /* espacio arriba y abajo */
+  margin: 40px 0 20px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
 @media (max-width: 480px) {
   .music-subtitle {
     font-size: 1.5rem;
@@ -454,6 +436,29 @@ color: transparent;
 /* =========================
    MÚSICA
 ========================= */
+/* Botones Soundcloud y More*/
+.btn-primary,
+.btn-More {
+  background-color: #61cf36e3;
+  color: rgba(255, 255, 255, 0.788);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn-primary:hover,
+.btn-More:hover {
+  background-color: #61cf36e3;
+}
+
+.btn-outline {
+  border: 2px solid #61cf36e3;
+  color: #61cf36e3;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+}
 .music-links {
   display: flex;
   justify-content: center;
@@ -503,7 +508,9 @@ color: transparent;
 ========================= */
 form {
   max-width: 600px;
+  width: 100%;        /* ocupa todo el ancho disponible */
   margin: 30px auto 0;
+  padding: 0 15px;    /* margen interno para que no toque los bordes */
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -519,14 +526,16 @@ label {
   margin-bottom: 5px;
 }
 
-input,
-textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  font-family: inherit;
+input, textarea { 
+  width: 100%; /* se ajusta al contenedor */ 
+  font-size: 1rem; 
 }
-
+@media (max-width: 480px) { form { 
+  max-width: 80%; /* en móviles ocupa todo el ancho */ 
+  padding: 0 10px; } input, textarea { 
+  font-size: 0.9rem; /* tipografía más chica */ 
+}
+}
 input:focus,
 textarea:focus {
   outline: 2px solid #61cf36;
