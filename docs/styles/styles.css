@@ -87,6 +87,12 @@ nav a:hover {
   .menu-toggle {
     display: block;
   }
+  @media (min-width: 768px) {
+  .navbar nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
 }
 
 /* =========================
@@ -539,6 +545,14 @@ input, textarea {
 input:focus,
 textarea:focus {
   outline: 2px solid #61cf36;
+}
+.fab.fa-instagram {
+  color: #E1306C; /* rosa oficial */
+  transition: color 0.3s;
+}
+
+.fab.fa-instagram:hover {
+  color: #FCAF45; /* naranja degradado */
 }
 
 /* =========================

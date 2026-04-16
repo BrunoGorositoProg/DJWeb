@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Servir carpeta "src" como estática
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // Ruta principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/index.html'));
+  res.sendFile(path.join(__dirname, 'docs/index.html'));
 });
 
 // Puerto
