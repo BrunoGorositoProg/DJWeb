@@ -10,8 +10,12 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <!-- Preconexión para Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
@@ -63,7 +67,7 @@
       </div>
           <br><br>
       <div class="imagen">
-        <img src="images/IMG-20251016-WA0027.jpg" alt="Pedro Gorosito DJ"/>
+        <img src="images/IMG-20251016-WA0027.jpg" alt="Pedro Gorosito DJ" loading="lazy"/>
       </div>
     </div>
   </section>
@@ -77,19 +81,19 @@
 
     <div class="carousel-track" id="carousel">
       <div class="card" data-index="0">
-        <img src="images/ManuXMuter.jpg" alt="Ice Producciones"/>
+        <img src="images/ManuXMuter.jpg" alt="Ice Producciones" loading="lazy"/>
       </div>
       <div class="card" data-index="1">
-        <img src="images/Fanetti.jpg" alt="Flapper Producciones"/>
+        <img src="images/Fanetti.jpg" alt="Flapper Producciones" loading="lazy"/>
       </div>
       <div class="card" data-index="2">
-        <img src="images/GrooveXBizza.jpg" alt="Groove Club Esperanza"/>
+        <img src="images/GrooveXBizza.jpg" alt="Groove Club Esperanza" loading="lazy"/>
       </div>
       <div class="card" data-index="3">
-        <img src="images/FlapperXScoppa.jpg" alt="Flapper X Scoppa"/>
+        <img src="images/FlapperXScoppa.jpg" alt="Flapper X Scoppa" loading="lazy"/>
       </div>
       <div class="card" data-index="4">
-        <img src="images/FrancoSmitch.jpg" alt="Flapper X Memories"/>
+        <img src="images/FrancoSmitch.jpg" alt="Flapper X Memories" loading="lazy"/>
       </div>
     </div>
 
@@ -127,13 +131,13 @@
 
   <div class="music-gallery">
     <a href="https://soundcloud.com/pedro-gorosito/pedro-gorosito-hotel-campo-alegre-rafaela-w-flapper-producciones" target="_blank" class="music-card">
-      <img src="images/ConsoleDj.jpg" alt="Pedro DJ Set 1">
+      <img src="images/ConsoleDj.jpg" alt="Pedro DJ Set 1" loading="lazy">
     </a>
     <a href="https://soundcloud.com/pedro-gorosito/pedro-gorosito-house-dj-set-at-home-vol-01" target="_blank" class="music-card">
-      <img src="images/ConsoleDj.jpg" alt="Pedro DJ Set 2">
+      <img src="images/ConsoleDj.jpg" alt="Pedro DJ Set 2" loading="lazy">
     </a>
     <a href="https://soundcloud.com/pedro-gorosito/pedro-gorosito-house-dj-set-at-home-vol02" target="_blank" class="music-card">
-      <img src="images/IMG-20251016-WA0014.jpg" alt="Pedro DJ Set 3">
+      <img src="images/IMG-20251016-WA0014.jpg" alt="Pedro DJ Set 3" loading="lazy">
     </a>
   </div>
 </section>
@@ -143,31 +147,31 @@
   <section id="contacto" class="section contact bg-contacto">
     <h2>Contacto & Booking</h2>
 
-    <form action="mailto:pgorosito.music@gmail.com" method="POST" enctype="text/plain">
-      <div class="form-group">
-        <label for="email">Tu correo electrónico:</label>
-        <input type="email" id="email" name="email" required/>
-      </div>
- 
-      <div class="form-group">
-        <label for="subject">Asunto:</label>
-        <input type="text" id="subject" name="subject" required/>
-      </div>
+    <form action="https://formspree.io/f/tu-endpoint" method="POST">
+  <div class="form-group">
+    <label for="email">Tu correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
 
-      <div class="form-group">
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
+  <div class="form-group">
+    <label for="subject">Asunto:</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
 
-      <button type="submit" class="btn-primary">Enviar mensaje</button>
-    </form>
+  <div class="form-group">
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary">Enviar mensaje</button>
+</form>
 
     <div class="contact-info">
       <p>📧 <a href="mailto:pgorosito.music@gmail.com">pgorosito.music@gmail.com</a></p>
-      <p>📍 Rafaela, Santa Fe</p>
+      <p>📍 Buenos Aires</p>
       <div class="social">
         <a href="https://www.instagram.com/pedrogorosito_?igsh=MXMwYXR5cHV3d24yOA==" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
+          <i class="fab fa-instagram"></i> instagram
         </a>
       </div>
     </div>
@@ -221,6 +225,5 @@
 
     updateCarousel();
   </script>
-
 </body>
 </html>

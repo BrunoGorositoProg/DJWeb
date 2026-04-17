@@ -42,6 +42,17 @@ function updateFlyerInfo(index) {
   dots.forEach(dot => dot.classList.remove("active"));
   dots[index].classList.add("active");
 }
+//Funcion para mejorar el carrusel
+const track = document.getElementById('carousel');
+let index = 0;
+
+function moveCarousel(direction) {
+  index = (index + direction + cards.length) % cards.length;
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+prevBtn.addEventListener('click', () => moveCarousel(-1));
+nextBtn.addEventListener('click', () => moveCarousel(1));
 
 // Inicializar con el primer evento
 updateFlyerInfo(0);
